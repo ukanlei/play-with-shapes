@@ -20,7 +20,8 @@ function newColorSquare(){
     context.fill(); //fill square
 }
 
-document.addEventListener("click", newColorSquare); //detect click then newColorSquare()
+let shape = document.getElementById("shapeCanvas");
+shape.addEventListener("click", newColorSquare); //detect click then newColorSquare()
 
 
 
