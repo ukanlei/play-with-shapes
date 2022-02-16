@@ -1,11 +1,8 @@
-let canvasForSquare = document.getElementById("canvasForSquare");
-let canvasForCircle = document.getElementById("canvasForCircle");
-let canvasForSquare = canvas.getContext("2d");
-let canvasForCircle = canvas.getContext("2d");
-
 
 //filled square
 function filledSquare(){
+    let canvasForSquare = document.getElementById("canvasForSquare");
+    context = canvasForSquare.getContext("2d");
     randomColor = "hsl(" + 360 * Math.random() + ", 50%, 50%)";
     //erase original square
     context.clearRect(0, 0, 600, 600); 
@@ -18,6 +15,9 @@ function filledSquare(){
 
 //filled circle
 function filledCircle(){
+    let canvasForCircle = document.getElementById("canvasForCircle");
+    context = canvasForCircle.getContext("2d");
+
     let randomColor = "hsl(" + 360 * Math.random() + ", 50%, 50%)";
     context.clearRect(0, 0, 600, 600);
     //draw circle
@@ -27,12 +27,30 @@ function filledCircle(){
     context.fill(); //fill square
 }
 
+filledSquare();
+filledCircle();
+
+
+/*function swapCanvas(){
+    if(canvasForSquare.style.visibility == "visible"){
+        canvasForSquare.style.visibility = "hidden";
+        canvasForCircle.style.visibility = "visible";
+  }else{
+        canvasForSquare.style.visibility="visible";
+        canvasForCircle.style.visibility="hidden";
+  }
+}
+
 //make buttons work
 let circleBtn = document.getElementById("circleBtn");
 let squareBtn = document.getElementById("squareBtn");
 circleBtn = circleBtn.addEventListener("click", filledCircle)
 squareBtn = squareBtn.addEventListener("click", filledSquare);
-//
+//*/
+
+
+
+
 
 
 
