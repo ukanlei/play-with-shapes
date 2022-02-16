@@ -1,6 +1,8 @@
-let canvas = document.querySelector("canvas");
-let context = canvas.getContext("2d");
-let randomColor = "hsl(" + 360 * Math.random() + ", 50%, 50%)";
+let canvasForSquare = document.getElementById("canvasForSquare");
+let canvasForCircle = document.getElementById("canvasForCircle");
+let canvasForSquare = canvas.getContext("2d");
+let canvasForCircle = canvas.getContext("2d");
+
 
 //filled square
 function filledSquare(){
@@ -14,7 +16,7 @@ function filledSquare(){
     context.fill(); //fill square
 }
 
-//Create filled circle
+//filled circle
 function filledCircle(){
     let randomColor = "hsl(" + 360 * Math.random() + ", 50%, 50%)";
     context.clearRect(0, 0, 600, 600);
@@ -28,28 +30,19 @@ function filledCircle(){
 //make buttons work
 let circleBtn = document.getElementById("circleBtn");
 let squareBtn = document.getElementById("squareBtn");
-selecteddCircleBtn = circleBtn.addEventListener("click", filledCircle)
-selecteddSquareBtn = squareBtn.addEventListener("click", filledSquare);
+circleBtn = circleBtn.addEventListener("click", filledCircle)
+squareBtn = squareBtn.addEventListener("click", filledSquare);
 //
 
 
-function clickToChangeColor(){
+
+
+
+/*function clickToChangeColor(){
     let shape = document.getElementById("shapeCanvas");
     let changeShape = shape.addEventListener("click", filledCircle); //detect click then filledCircle()
     return changeShape;
-}
-
-clickToChangeColor();
-
-    /*let shape = document.getElementById("shapeCanvas");
-    let changeShape; 
-    if (circleBtn.click == true){
-       changeShape = shape.addEventListener("click", filledCircle); //detect click then filledCircle()
-    } else if (squareBtn.click == true){
-       changeShape = shape.addEventListener("click", filledSquare);
-    }
-    return changeShape;*/
-
+}*/
 
 
 
